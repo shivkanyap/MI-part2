@@ -21,6 +21,7 @@ import Vendors from './Vendors';
 import Photos from './Photos';
 import Wedding from './Wedding';
 import Blog from './Blog';
+import App from '../../App.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -199,6 +200,10 @@ export default function Navbar() {
             />
           </div>
           <Button color="inherit" onClick={()=> handleClick()}>{userButton}</Button>
+          
+          {userButton==='Logout' && <h1 style={{ marginLeft: '100px', marginTop: '0px' }}> 
+          welcome user
+          </h1>}
         </Toolbar>
       </AppBar>
       {blogHover === true ? <Blog /> : null}

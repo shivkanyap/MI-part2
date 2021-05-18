@@ -10,7 +10,7 @@ export default createMuiTheme({
             orange:`${arcOrange}`
         },
         primary:{
-            main:`${arcBlue}`
+            main:`#801A17`
         },
         secondary:{
             main:`${arcOrange}`
