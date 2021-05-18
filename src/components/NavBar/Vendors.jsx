@@ -1,6 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box';
+import {Link,BrowserRouter, Route,Switch} from 'react-router-dom'
+import Page from './Page'
 const Vendors=()=>{
 
   
@@ -28,10 +30,16 @@ const Vendors=()=>{
         
       >{
         <div>
-            <h1>Mendhi</h1>
-          <h1>Sangeeta Decorations</h1>
-          <h1>Flowers</h1>
-          <h1>Destination Weddings</h1>
+          <BrowserRouter>
+          <Link to="/"><h1>Mendhi</h1></Link>
+          <Link><h1>Sangeeta Decorations</h1></Link>
+          <Link><h1>Flowers</h1></Link>
+          {/* <Switch>
+            <Route path="/" component={Page}/>
+          </Switch> */}
+          </BrowserRouter>
+          
+            
         </div>
         }</Box>
     </Grid>

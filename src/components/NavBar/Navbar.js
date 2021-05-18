@@ -99,6 +99,7 @@ export default function Navbar() {
   const [weddingColor, setWeddingColor] = useState('#ffffff');
   const [photosColor, setPhotosColor] = useState('#ffffff');
   const [blogColor, setBlogColor] = useState('#ffffff');
+  const [authenticate,setAuth]=useState('false')
 
   const handleChange = (e, newvalue) => {
     setValue(newvalue);
@@ -111,7 +112,10 @@ export default function Navbar() {
                    setUserButton("Login")
                 }
         }
-
+  const handleVe=(e)=>{
+    setVendorHover(true);
+    setVendorColor('#FFFF00');
+  }
   return (
     <div className={classes.root}>
       <AppBar position='static' style={{ background: '#800000' }}>
@@ -129,6 +133,15 @@ export default function Navbar() {
             aria-label='scrollable force tabs example'
           >
             <Tab
+              onClick={(e) => handleVe(e)
+                // setVendorHover(true);
+                // setVendorColor('#FFFF00');
+              }
+              
+              label={<span style={{ color: vendorColor }}>Vendors</span>}
+              icon={<StoreIcon />}
+            />
+            {/* <Tab
               onMouseEnter={(e) => {
                 setVendorHover(true);
                 setVendorColor('#FFFF00');
@@ -139,7 +152,7 @@ export default function Navbar() {
               }}
               label={<span style={{ color: vendorColor }}>Vendors</span>}
               icon={<StoreIcon />}
-            />
+            /> */}
 
             <Tab
               onMouseEnter={(e) => {
