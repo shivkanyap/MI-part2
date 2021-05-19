@@ -7,7 +7,7 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 // import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -22,6 +22,7 @@ import Photos from './Photos';
 import Wedding from './Wedding';
 import Blog from './Blog';
 import App from '../../App.css'
+import Page from './Page'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -138,7 +139,7 @@ export default function Navbar() {
                 // setVendorColor('#FFFF00');
               }
               
-              label={<span style={{ color: vendorColor }}>Vendors</span>}
+              label={<span style={{ } }>Vendors</span>}
               icon={<StoreIcon />}
             />
             {/* <Tab
@@ -219,6 +220,11 @@ export default function Navbar() {
           </h1>}
         </Toolbar>
       </AppBar>
+      <BrowserRouter>
+      <Switch>
+        <Route path="/page" component={Page}></Route>
+      </Switch>
+      </BrowserRouter>
       {blogHover === true ? <Blog /> : null}
       {vendorHover === true ? <Vendors /> : null}
       {photosHover === true ? <Photos /> : null}

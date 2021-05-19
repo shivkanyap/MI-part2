@@ -11,7 +11,9 @@ const Vendors=()=>{
     console.log('inside vendors')
   }, [])
 
-
+  function refreshPage(){ 
+    window.location.reload(); 
+}
 
   return(
     <>
@@ -31,16 +33,15 @@ const Vendors=()=>{
       >{
         <div>
           <BrowserRouter>
-          <Link to="/"><h1>Mendhi</h1></Link>
+          <Link to="/page" ><h1>Mendhi</h1></Link>
           <Link><h1>Sangeeta Decorations</h1></Link>
           <Link><h1>Flowers</h1></Link>
-          {/* <Switch>
-            <Route path="/" component={Page}/>
-          </Switch> */}
+          
           </BrowserRouter>
           
             
         </div>
+        
         }</Box>
     </Grid>
     </>
